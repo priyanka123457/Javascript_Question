@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .task-list li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-list button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .task-list button:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Todo List</div>
+        
+        <!-- Static tasks will be displayed here -->
+        <ul class="task-list" id="list">
+            <!-- Static tasks will be added here dynamically -->
+        </ul>
+    </div>
+
+    <script>
+        // Static tasks which we want to add
+        const tasks = [
+            "Buy Groceries",
+            "Complete Homework",
+            "Call Mom",
+            "Walk the Dog"
+        ];
+
+        // Get the <ul> element where tasks will be added
+        const list = document.getElementById('list');
+
+        // Loop through each predefined task
+        tasks.forEach(task => {
+            // Create a new <li> element for each task
+            const newtask = document.createElement('li');  
+            newtask.textContent = task;  // Set the text for the task
+
+            // Create a Delete button for each task
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = "Delete";  // Set button text to "Delete"
+
+            // Append the Delete button inside the <li> element
+            newtask.appendChild(deleteButton);
+
+            // When the delete button is clicked, remove the task
+            deleteButton.onclick = function() {
+                newtask.remove();  // Remove the task from the list
+            };
+
+            // Append the new task to the <ul> element
+            list.appendChild(newtask);
+        });
+    </script>
+</body>
+</html>

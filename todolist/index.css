@@ -1,0 +1,63 @@
+body{
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.conatiner{
+    border:none;
+    border-radius: 15px;
+    height: 250px;
+    background-color:blanchedalmond;
+    width: 25vw;
+
+}
+.header{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: aqua;
+    color: black;
+}
+.inputtask {
+    display: flex;                  /* Align elements horizontally */
+    justify-content: space-between;  /* Space between input and button */
+    align-items: center;             /* Align items vertically to the center */
+    width: 100%;                     /* Full width of the parent container */
+    height: 40px;                    /* Height of the entire container */
+    padding: 5px;                    /* Padding around the entire inputtask */
+    border-radius: 5px;              /* Rounded corners for the container */
+    box-sizing: border-box;          /* Ensure padding doesn't affect width/height */
+}
+
+.inputtask input {
+    width: 80%;                      /* The input takes up 80% of the space */
+    height: 30px;                    /* Input field height */
+    font-size: 16px;                 /* Text size inside input */
+    padding: 5px;                    /* Padding inside the input field */
+    border-radius: 5px;              /* Rounded corners for the input */
+    box-sizing: border-box;          /* Ensure padding doesn't affect width/height */
+}
+
+#button1 {
+    background-color: aqua;
+    color: black;
+    height: 35px;                    /* Button height */
+    width: 15%;                       /* Button takes up 15% of space */
+    border-radius: 5px;              /* Rounded corners for the button */
+    font-size: 14px;                 /* Font size inside the button */
+    border: none;                    /* Removes button border */
+    cursor: pointer;                 /* Pointer cursor for button */
+}
+ul{
+    list-style: none;padding: 15px;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+}
